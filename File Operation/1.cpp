@@ -1,4 +1,4 @@
-//创建和写入文本文件
+//创建和写入文本文件（需包含头文件fstream）
 #include <iostream>
 #include <fstream> //ofstream类需要的文件操作头文件
                    //ostream写，istream读
