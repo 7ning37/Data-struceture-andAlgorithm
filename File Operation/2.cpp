@@ -15,9 +15,17 @@ int main()
 
     string buffer;//存放从文件中读取的内容
 
+    //判断文件是否打开
+    if(arr.is_open()==false)
+    {
+        cout<<"文件打开失败"<<endl;
+        system("pause");
+        return 0;
+    }
+    
     //读取文件内容的代码
     //文本文件一般以行的方式组织数据
-    while(getline(arr,buffer))
+    while(getline(arr,buffer))//可以写arr>>buffer
     {
         cout<<buffer<<endl;
     }
@@ -25,4 +33,7 @@ int main()
     arr.close();//关闭文件，arr对象失效前会自动调用close()
 
     cout<<"操作文件完成。"<<endl;
+
+    system("pause");
+    return 0;
 }
